@@ -22,10 +22,14 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+async def root():
+    return {"Hello": "World"}
 
 
 
-
+#esto era solamente una prueba, despues borrar
+"""
 @app.get("/")
 async def dashboard(request: Request):
     cpu_usage = [10, 15, 20, 25]  # Simulación de datos para el ejemplo
@@ -33,6 +37,9 @@ async def dashboard(request: Request):
         "request": request,
         "cpu_usage": cpu_usage
     })
+
+"""
+
 
 
 @app.get("/v0/version")

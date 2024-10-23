@@ -10,6 +10,17 @@ COPY . /code/
 
 CMD ["fastapi", "run", "main.py", "--port", "8000"]
 
+#para crear la imagen
+# docker build backend .
+
+#para correr el contenedor con esa imagen
+#docker run -p 8000:8000 backend
+#despues acceder al link http://localhost:8000/
+# o
+# docker run -p 192.168.50.169:8000:8000 backend
+# o
+
+
 
 #CMD ["fastapi", "run", "main.py","--host","0.0.0.0", "--port", "8000"]
 
