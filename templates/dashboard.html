@@ -1,0 +1,20 @@
+<canvas id="cpuChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('cpuChart').getContext('2d');
+    var cpuChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['10s', '20s', '30s', '40s', '50s'],  // Etiquetas de tiempo
+            datasets: [{
+                label: 'Uso de CPU',
+                data: [{{ cpu_usage|join(', ') }}],  // Lista dinámica desde el backend
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                fill: false,
+                tension: 0.1  // Suaviza la curva
+            }]
+        }
+    });
+</script>
