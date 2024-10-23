@@ -18,7 +18,8 @@ CMD ["fastapi", "run", "main.py", "--port", "8000"]
 #despues acceder al link http://localhost:8000/
 # o
 # docker run -p 192.168.50.169:8000:8000 backend
-# o
+# despues acceder al link de  ip de su pc  http://ipsupc:8000/
+
 
 
 
